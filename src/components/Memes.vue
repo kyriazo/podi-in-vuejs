@@ -22,12 +22,6 @@ export default {
 }
 </script>
 
-<style scoped>
-.memes-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 65px auto 0 auto;
-    max-width: 1320px;
-}
+<style lang='scss' scoped>
+@import './../assets/styles/memes.scss';
 </style>

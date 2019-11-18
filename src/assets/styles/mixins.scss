@@ -1,0 +1,36 @@
+@import 'breakpoints.scss';
+
+@mixin mob {
+    @media (min-width: #{$mob}) {
+        @content;
+    }
+ }
+ 
+ // Medium devices
+ @mixin tab {
+    @media (min-width: #{$tab}) {
+        @content;
+    }
+ }
+ 
+ // Large devices
+ @mixin desk {
+    @media (min-width: #{$desk}) {
+        @content;
+    }
+ }
+ 
+ // Extra large devices
+ @mixin wide {
+    @media (min-width: #{$wide}) {
+        @content;
+    }
+ }
+
+ // Huge devices
+  // Extra large devices
+  @mixin huge {
+    @media (min-width: #{$huge}) {
+        @content;
+    }
+ }

@@ -1,13 +1,27 @@
+@import './mixins.scss';
+
 .banner-container {
     width:100%;
     height: 2100px;
     display: flex;
     position: relative;
     justify-content: center;
-    background-image: url('./../assets/images/front-banner.png');
+    background-image: url('./../assets/images/front-banner-mob.png');
     background-position: center;
     text-align: center;
     background-repeat: no-repeat;
+
+    @include mob {
+        background-image: url('./../assets/images/front-banner-tab.png');
+    }
+
+    @include tab {
+        background-image: url('./../assets/images/front-banner-desk.png');
+    }
+    
+    @include desk {
+        background-image: url('./../assets/images/front-banner.png');
+    }
 }
 
 .banner-hashtag {
