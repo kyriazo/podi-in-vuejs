@@ -1,0 +1,139 @@
+.meme {
+    width: 48.8%;
+    margin-bottom: 65px;
+}
+
+.meme-image {
+    position: relative;
+    max-width: 645px;
+}
+
+.expandable-image {
+    cursor: unset !important;
+}
+
+.expand-button {
+    opacity: 100% !important;
+    background-image: url('./../assets/images/expand.png');
+    background-repeat: no-repeat;
+    right: 20px !important;
+    top: unset !important;
+    bottom: 20px !important;
+    padding: 5px !important;
+    cursor: zoom-in;
+    
+    svg path{
+        fill: none !important;
+    }
+}
+
+.meme-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 45px 0 40px 0;
+}
+
+.share {
+    display: flex;
+    flex-wrap: nowrap;
+
+    button {
+        padding: 30px 100px 30px 0;
+        cursor: pointer;
+        border: none;
+        width: 100%;
+        color: #d83f50;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    &:hover {
+            button {
+                background-color: #3b5998;
+                color: white;
+            }
+            .share-icon {
+                background-color: #233d74;
+
+                &:before {
+                    background-image: url('./../assets/images/facebook.png');
+                    display: block;
+                    background-repeat: no-repeat;
+                    background-position-x: center;
+                    background-position-y: center;
+                    content: "";
+                    height: 100%;
+                    margin: auto;
+                }
+            }
+        }
+
+    .share-icon {
+        width: 100px;
+        height: 83px;
+    }
+}
+
+.modal-container {
+    background-image: url('./../assets/images/pop-up.png');
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;    
+}
+
+.inner-container {
+    margin-top: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .text {
+        max-width: 470px;
+        text-align: center;
+
+        .main-text {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .sub-text {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+    }
+
+    input {
+        width: 600px;
+        border: none;
+        font-size: 15px;
+        font-weight: bold;
+        padding: 30px 0;
+        text-align: center;
+        border-radius: 40px;
+        margin-bottom: 20px;
+    }
+
+    .terms {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .share-button {
+        border: none;
+        background-color: #d3002b;
+        color: white;
+        cursor: pointer;
+        padding: 25px 0;
+        border-radius: 30px;
+        width: 100%;
+        max-width: 375px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+}

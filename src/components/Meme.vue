@@ -2,11 +2,24 @@
     <div class='meme'>
         <div class='meme-image'>
             <expandable-image :src="require('./../assets/images/meme.png')" v-bind:close-on-background-click='true' ></expandable-image>
-            <a class='expand' href='/'><img src='./../assets/images/expand.png'></a>
         </div>
         <div class='meme-title'>{{title}}</div>
-        <button class='share' @click="show">SHARE NOW!</button>
-        <modal name='test-modal'>It works!</modal>
+        <div class='share'><span class='share-icon'></span><button @click="show">SHARE NOW!</button></div>
+        <modal class= 'modal' name='test-modal' width='90%' height='100%' >
+            <!-- <img src="./../assets/images/pop-up.png" > -->
+            <div class='modal-container'>
+                <div class="inner-container">
+                    <div class='text'>
+                        <div class='main-text'>Είναι στο χέρι σου... ε, στο πόδι σου ήθελα να πω!</div>
+                        <div class='sub-text'>Δώσε μου το email σου για να μπορείς να κάνεις share το σύνθημά σου.</div>
+                    </div>
+                    <input type='text' placeholder='EMAIL'>
+                    <span class='terms'>Αποδέχομαι τους όρους</span>
+                    <button class='share-button'>ΕΙΣΑΙ ΕΤΟΙΜΟΣ ΝΑ ΚΑΝΕΙΣ SHARE</button>
+                </div>
+            </div>
+        </modal>
+        <!-- <Modal v-model="modalOpen"></Modal> -->
     </div>
 </template>
 
@@ -14,6 +27,7 @@
 import Vue from 'vue'
 import VueExpandableImage from "vue-expandable-image";
 Vue.use(VueExpandableImage);
+// import Modal from './Modal';
 import vmodal from 'vue-js-modal'
 Vue.use(vmodal)
 
@@ -23,53 +37,30 @@ export default {
         'title',
     ],
     methods: {
-        show () {
+        // openModal () {
+        //     this.modalOpen = !this.modalOpen;
+        // },
+        show() {
             this.$modal.show('test-modal');
         },
+
         hide () {
             this.$modal.hide('test-modal');
         }
-    }
+    },
+    // components: {
+    //     Modal
+    // },
+    // data() {
+    //     return {
+    //         modalOpen: false
+    //     }
+    // }
+
 }
 </script>
 
-<style scoped>
-.meme {
-    width: 48.8%;
-    margin-bottom: 65px;
-}
+<style lang="scss" >
+@import './../assets/styles/meme.scss';
 
-.meme-image {
-    position: relative;
-    max-width: 645px;
-}
-
-.expand {
-    position: absolute;
-    bottom: 25px;
-    right: 20px;
-    z-index: 1;
-}
-
-.meme-title {
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 45px 0 40px 0;
-}
-
-.share {
-    color: #d83f50;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    padding: 30px 0;
-    cursor: pointer;
-
-}
-
-.share:hover {
-    background-color: #3b5998;
-    color: white;
-}
 </style>

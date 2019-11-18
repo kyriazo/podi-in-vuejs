@@ -24,14 +24,20 @@ export default {
 }
 </script>
 
-<style>
+<style lang='scss'>
+
+@import './assets/styles/style.scss';
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Mont';
 }
 
 body {
   margin: 0;
 }
+
+input,button {
+  outline: none;
+}
+
 </style>
