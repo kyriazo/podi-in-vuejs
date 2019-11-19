@@ -2,41 +2,60 @@
 
 .banner-container {
     width:100%;
-    height: 2100px;
+    height: auto;
     display: flex;
     position: relative;
     justify-content: center;
     background-image: url('./../assets/images/front-banner-mob.png');
-    background-position: center;
+    background-position-x: center;
+    background-position-y: top;
     text-align: center;
     background-repeat: no-repeat;
 
     @include mob {
         background-image: url('./../assets/images/front-banner-tab.png');
     }
-
-    @include tab {
-        background-image: url('./../assets/images/front-banner-desk.png');
-    }
     
     @include desk {
         background-image: url('./../assets/images/front-banner.png');
+    }
+
+    @include huge {
+        height: 2100px;
     }
 }
 
 .banner-hashtag {
     position: absolute;
     top: 30px;
-    left: 40px;
+    left: 0;
+    right: 0;
     display: block;
     z-index: 1;
     color: white;
+
+    @include mob {
+        right: unset;
+        left: 40px;
+    }
 }
 
 .inner-container {
     max-width: 760px;
     color: white;
-    margin-top: 1000px;
+    margin-top: 500px;
+
+    @include mob {
+        margin-top: 800px;
+    }
+
+    @include tab {
+        padding: 0;
+    }
+
+    @include desk {
+        margin-top: 1000px;
+    }
 }
 
 .banner {
@@ -51,6 +70,11 @@
 .video-header {
     margin-bottom: 55px;
     font-size: 30px;
+    padding: 0 10px;
+
+    @include desk {
+        padding: 0;
+    }
 }
 
 .video-header span {
@@ -58,32 +82,54 @@
 }
 
 .video {
-    position: absolute;
-    bottom: 0;
-    transform:translateY(50%);
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
+    max-width: 1200px;
+    width: 100%;
+
+    @media (min-width: 1500px) {
+        position: absolute;
+        bottom: 0;
+        transform:translateY(50%);
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+    }
 }
 
 .logo {
     position: absolute;
     bottom: 20px;
     right: 20px;
+    display: none;
 
+    @include huge {
+        display: block;
+    }
 }
 
 h1 {
-    font-size: 45px;
+    font-size: 35px;
     font-weight: normal;
     margin: 0 0 40px 0;
+
+    @include mob {
+        font-size: 45px;
+    }
 }
 
 .main-text {
-    font-size: 18px;
+    font-size: 15px;
     margin-bottom: 50px;
     line-height: 1.8;
+    padding: 0 10px;
+
+    @include mob {
+        font-size: 18px;
+    }
+
+    @include desk {
+        padding: 0;
+    }
 
     span {
         font-weight: bold;
@@ -94,13 +140,18 @@ button {
     background-color: #d3002b;
     border: none;
     max-width: 380px;
-    padding: 27px 60px;
+    padding: 23px 50px;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 14px;
     color: white;
     border-radius: 30px;
     margin-bottom: 115px;
     cursor: pointer;
+
+    @include mob {
+        font-size: 20px;
+        padding: 27px 60px;
+    }
 
     span {
         font-weight: bold;

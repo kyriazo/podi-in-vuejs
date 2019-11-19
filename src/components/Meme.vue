@@ -5,8 +5,12 @@
         </div>
         <div class='meme-title'>{{title}}</div>
         <div class='share'><span class='share-icon'></span><button @click="show">SHARE NOW!</button></div>
-        <modal class= 'modal' name='test-modal' width='90%' height='100%' >
-            <!-- <img src="./../assets/images/pop-up.png" > -->
+        <modal class= 'modal' name='share-modal' width='100%' height='auto' :adaptive=true  :scrollable=true >
+            <div slot="top-right">
+                <button class='close' @click="$modal.hide('share-modal')">
+                    ✕
+                </button>
+            </div>
             <div class='modal-container'>
                 <div class="inner-container">
                     <div class='text'>
@@ -41,11 +45,11 @@ export default {
         //     this.modalOpen = !this.modalOpen;
         // },
         show() {
-            this.$modal.show('test-modal');
+            this.$modal.show('share-modal');
         },
 
         hide () {
-            this.$modal.hide('test-modal');
+            this.$modal.hide('share-modal');
         }
     },
     // components: {
