@@ -44,10 +44,32 @@
         cursor: pointer;
         border: none;
         width: 100%;
-        color: #d83f50;
         font-size: 20px;
         font-weight: bold;
         text-align: center;
+        color: white;
+        background-color: #3b5998;
+
+        @include tab {
+            color: #d83f50;
+            background-color: white;
+        }
+    }
+    @media (max-width: 768px){
+        .share-icon {
+            background-color: #233d74;
+
+            &:before {
+                background-image: url('./../assets/images/facebook.png');
+                display: block;
+                background-repeat: no-repeat;
+                background-position-x: center;
+                background-position-y: center;
+                content: "";
+                height: 100%;
+                margin: auto;
+            }
+        }
     }
 
     &:hover {
@@ -78,13 +100,17 @@
 }
 
 .modal-container {
-    background-image: url('./../assets/images/pop-up.png');
+    background-image: url('./../assets/images/pop-up-mob.png');
     background-position: center;
     height: 100%;
     width: 100%;
     color: white;
     display: flex;
-    justify-content: center;    
+    justify-content: center;
+
+    @include tab {
+        background-image: url('./../assets/images/pop-up.png');
+    }
 
     .inner-container {
         margin-top: 480px;
@@ -143,6 +169,7 @@
             max-width: 375px;
             font-size: 15px;
             font-weight: bold;
+            margin-bottom: 30px;
 
             @include mob {
                 width: 100%;
