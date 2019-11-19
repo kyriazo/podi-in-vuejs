@@ -1,5 +1,3 @@
-const PrerenderSPAPlugin = require('prerender-spa-plugin')
-const PuppeteerRenderer = PrerenderSPAPlugin.PuppeteerRenderer;
 
 module.exports = {
     module: {
@@ -17,11 +15,4 @@ module.exports = {
         }
       ]
     },
-    plugins: [
-      new PrerenderSPAPlugin({
-        staticDir: path.join(__dirname, '/dist'), // The path to the folder where index.html is.
-        routes: ['/'], // List of routes to prerender.
-        renderer: new PuppeteerRenderer()
-      })
-    ]
   }
