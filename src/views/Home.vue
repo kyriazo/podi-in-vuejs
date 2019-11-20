@@ -21,6 +21,9 @@ export default {
     Gif,
     Memes,
     Footer,
-  }
+  },
+  mounted() {
+    document.querySelector('meta[property="og:image"]').setAttribute("content",'new-image');
+  },
 }
 </script>
