@@ -15,7 +15,9 @@ module.exports = {
       ],
       useRenderEvent: false,
       headless: true,
-      onlyProduction: true
+      onlyProduction: true,
+      // renderAfterTime: 30000,
+      renderAfterElementExists: '[data-vue-meta]'
     }
   }
 }
