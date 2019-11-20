@@ -24,13 +24,10 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.13.0",
+    "prerender-spa-plugin": "^3.2.1",
     "sass-loader": "^8.0.0",
+    "vue-cli-plugin-prerender-spa": "^1.1.6",
     "vue-template-compiler": "^2.6.10"
-  },
-  "vuePlugins": {
-    "service": [
-      "build.prerender.js"
-    ]
   },
   "eslintConfig": {
     "root": true,
@@ -54,5 +51,10 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "vuePlugins": {
+    "service": [
+      "build.prerender.js"
+    ]
+  }
 }
