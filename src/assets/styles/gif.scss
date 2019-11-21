@@ -102,5 +102,13 @@
     @include huge{
         display: block;
         margin: 130px auto 0 auto;
+        -webkit-animation: softBounce 0.8s infinite alternate ease-in-out;
+        animation: softBounce 0.8s infinite alternate ease-in-out;
+
+          @keyframes softBounce {
+            0%   { transform: translateY(0); }
+            50%  { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+          }
     }
 }
