@@ -44,6 +44,7 @@
         cursor: pointer;
         border: none;
         width: 100%;
+        height: 85px;
         font-size: 20px;
         font-weight: bold;
         text-align: center;
@@ -95,13 +96,14 @@
 
     .share-icon {
         width: 100px;
-        height: 83px;
+        height: 85px;
     }
 }
 
 .modal-container {
     background-image: url('./../assets/images/pop-up-mob.png');
     background-position: center;
+    position: relative;
     height: 100%;
     width: 100%;
     color: white;
@@ -157,31 +159,43 @@
             font-size: 14px;
             margin-bottom: 30px;
         }
+        .share-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
 
-        .share-button {
-            border: none;
-            background-color: #d3002b;
-            color: white;
-            cursor: pointer;
-            padding: 25px 0;
-            border-radius: 30px;
-            width: 90%;
-            max-width: 375px;
-            font-size: 15px;
-            font-weight: bold;
-            margin-bottom: 30px;
+            .share-button {
+                border: none;
+                background-color: #d3002b;
+                color: white;
+                cursor: pointer;
+                padding: 25px 0;
+                border-radius: 30px;
+                width: 90%;
+                max-width: 375px;
+                font-size: 15px;
+                font-weight: bold;
+                margin-bottom: 30px;
 
-            @include mob {
-                width: 100%;
-                font-size: 18px;
+                @include mob {
+                    width: 100%;
+                    font-size: 18px;
+                }
             }
         }
     }
 }
 
+.close-container {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+}
+
 .close {
     display: block;
-    font-size: 28px;
+    font-size: 50px;
     color: white;
     cursor: pointer;
     z-index: 1;
