@@ -4,7 +4,7 @@
         <div class='inner-container'>
             <h1>Γίνε κι εσύ <span>IDERistas!</span></h1>
             <div class='main-text'>Οι IDERistas είναι το κίνημα που στόχο έχει να στηρίξει το αναμφισβητητο δικαίωμα της επιλογής, όσο ακραία κι αν είναι αυτή. Να στηρίξει το δικαίωμα μου να γίνω το άκρο που θέλω: <span>Να γίνω πόδι! Και σ' αυτό σε θέλω μαζί μου.</span> Σου ζητώ λοιπόν να βάλεις κι εσύ ένα χέρι για να γίνω πόδι κάνοντας share τα συνθήματα του αγώνα μου.</div>
-            <button>ΞΕΚΙΝΑ ΤΩΡΑ ΤΟΝ ΑΓΩΝΑ!</button>
+            <button @click='scrollMe'>ΞΕΚΙΝΑ ΤΩΡΑ ΤΟΝ ΑΓΩΝΑ!</button>
             <img class='hand' src='./../assets/images/hand.png'>
             <div class='video-header'>Μία ιστορία <span>άκρως αληθινή...</span></div>
             <img class='video' src='./../assets/images/video.png'>
@@ -15,7 +15,11 @@
 
 <script>
 export default {
-    name: 'Banner'
+    name: 'Banner',
+    methods: {
+        scrollMe() {
+        }
+    }
 }
 </script>
 
