@@ -26,9 +26,10 @@ export default {
     Footer,
   },
   mounted() {
-    // console.log(this.$route.name);
+    console.log(this.$route);
   },
   metaInfo() {    
+      console.log('I just ran on',this.$route);
       return {
         title: this.$route.name,
         meta: [
@@ -38,7 +39,7 @@ export default {
           { property:"og:image:type", content:'image/jpg' },
           { property:"og:image:width", content: 260 },
           { property:"og:image:height", content: 260 },
-          { property:"og:description", content: "Οι IDERistas είναι το κίνημα που στόχο έχει να στηρίξει το αναμφισβητητο δικαίωμα της επιλογής, όσο ακραία κι αν είναι αυτή. Να στηρίξει το δικαίωμα μου να γίνω το άκρο που θέλω: Να γίνω πόδι! Και σ' αυτό σε θέλω μαζί μου. Σου ζητώ λοιπόν να βάλεις κι εσύ ένα χέρι για να γίνω πόδι κάνοντας share τα συνθήματα του αγώνα μου." },
+          { property:"og:description", content: "Οι IDERistas είναι το κίνημα που στόχο έχει να στηρίξει το αναμφισβήτητο δικαίωμα μου να γίνω το άκρο που θέλω: Να γίνω πόδι!  Και σ' αυτό σε θέλω μαζί μου." },
           { property:'http-equiv', content: 'text/html'},
         ]
       }
