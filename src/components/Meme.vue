@@ -5,32 +5,29 @@
         </div>
         <div class='meme-title'>{{title}}</div>
         <div class='share'><span class='share-icon'></span><button @click="show">SHARE NOW!</button></div>
-        <modal class= 'modal' name='share-modal' width='100%' height='auto'  :scrollable=true >
-            <div slot="top-right">
+        <modal class= 'modal' name='share-modal' width='100%' height='auto' >
+            <div class='modal-container'>
+                <div class='close-container' slot="top-right">
                 <button class='close' @click="hide">
                     ✕
                 </button>
             </div>
-            <div class='modal-container'>
                 <div class="inner-container">
                     <div class='text'>
                         <div class='main-text'>Είναι στο χέρι σου... ε, στο πόδι σου ήθελα να πω!</div>
                         <div class='sub-text'>Δώσε μου το email σου για να μπορείς να κάνεις share το σύνθημά σου.</div>
                     </div>
                         <mailchimp-subscribe
-                            url="https://e-sepia.us5.list-manage.com/subscribe/post"
+                            url="https://e-sepia.us5.list-manage.com/subscribe/post-json"
                             user-id="4137c3bb43188dbda96b67132"
                             list-id="1b660cfa21"
                             @error="onError"
                             @success="onSuccess"
                         >
                             <template v-slot="{ subscribe, setEmail, error, success, loading }">
-                            <form @submit.prevent="subscribe">
-                                <input type="email" @input="setEmail($event.target.value)" />
-                                <button type="submit">Submit</button>
-                                <div v-if="error">{{ error }}</div>
-                                <div v-if="success">Yay!</div>
-                                <div v-if="loading">Loading…</div>
+                            <form class='share-form' @submit.prevent="subscribe">
+                                <input type="email" placeholder='EMAIL' @input="setEmail($event.target.value)" />
+                                <button class="share-button" type="submit">ΕΙΣΑΙ ΕΤΟΙΜΟΣ ΝΑ ΚΑΝΕΙΣ SHARE</button>
                             </form>
                             </template>
                         </mailchimp-subscribe>
@@ -65,11 +62,17 @@ export default {
         hide () {
             this.$modal.hide('share-modal');
         },
-        onError() {
-            alert('There is an error');
+        onError(error) {
+            if(error.includes('s already subscribed to list')) {
+                console.log(this.$route.path);
+                window.location.href = 'https://www.facebook.com/sharer/sharer.php?u=demothelonaginopodi.e-sepia.com/' + this.$props.image + '&hashtag=%23thelonaginopodi';
+            }else{
+                alert('Error');
+            }
         },
         onSuccess() {
-            alert('Succesful');
+            console.log(this.$route.path);
+            window.location.href = 'https://www.facebook.com/sharer/sharer.php?u=demothelonaginopodi.e-sepia.com/' + this.$props.image + '&hashtag=%23thelonaginopodi';
         },
     },
 }
