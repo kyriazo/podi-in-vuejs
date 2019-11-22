@@ -5,7 +5,7 @@
         </div>
         <div class='meme-title'>{{title}}</div>
         <div class='share'><span class='share-icon'></span><button @click="show">SHARE NOW!</button></div>
-        <modal class= 'modal' name='share-modal' width='100%' height='auto' >
+        <modal class= 'modal' name='share-modal' width='100%' height='auto' :scrollable=true>
             <div class='modal-container'>
                 <div class='close-container' slot="top-right">
                 <button class='close' @click="hide">
@@ -26,7 +26,8 @@
                         >
                             <template v-slot="{ subscribe, setEmail, error, success, loading }">
                             <form class='share-form' @submit.prevent="subscribe">
-                                <input type="email" placeholder='EMAIL' @input="setEmail($event.target.value)" />
+                                <input class='email' type="email" required placeholder='EMAIL' @input="setEmail($event.target.value)" />
+                                <label class='terms' for='terms'><input id='terms' type="checkbox" required name="terms">Αποδέχομαι τους <a href="/terms">όρους</a></label>
                                 <button class="share-button" type="submit">ΕΙΣΑΙ ΕΤΟΙΜΟΣ ΝΑ ΚΑΝΕΙΣ SHARE</button>
                             </form>
                             </template>
