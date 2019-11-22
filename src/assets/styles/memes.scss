@@ -17,3 +17,18 @@
         flex-direction: row;
     }
 }
+
+.logo-bottom {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-direction: column;
+
+    span {
+        font-size: 12px;
+    }
+
+    @include desk {
+        display: none;
+    }
+}
