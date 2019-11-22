@@ -2,6 +2,7 @@
 
 .gif-container {
     display: flex;
+    z-index: -1;
     justify-content: center;
     position: relative;
     padding: 0 20px 60px;
@@ -46,6 +47,7 @@
 
 .gif {
     width: 100%;
+    max-width: 660px;
 
     @include huge {
         margin-right: 100px;
@@ -73,6 +75,7 @@
     margin: 50px 0 0 0;
     color: black;
     margin-bottom: 30px;
+    line-height: 1.2;
 
     @include mob {
         font-size: 35px;
@@ -80,7 +83,7 @@
 
     @include huge {
         margin: 245px 0 15px;
-        margin-bottom: 0;
+        margin-bottom: 20px;
     }
 }
 
@@ -92,7 +95,6 @@
 
     @include tab {
         font-size: 20px;
-        line-height: 1;
     }
 }
 
