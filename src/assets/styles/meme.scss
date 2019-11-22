@@ -13,8 +13,16 @@
     cursor: unset !important;
 }
 
+body>.expandable-image.expanded{
+    background: white;
+    background: rgba(255,255,255,0.95) !important;
+    &>img {
+        max-width: 645px !important;
+    }
+}
+
 .expand-button {
-    opacity: 100% !important;
+    opacity: 1 !important;
     background-image: url('./../assets/images/expand.png');
     background-repeat: no-repeat;
     right: 20px !important;
@@ -22,6 +30,7 @@
     bottom: 20px !important;
     padding: 5px !important;
     cursor: zoom-in;
+    transition: unset !important;
     
     svg path{
         fill: none !important;
@@ -40,7 +49,7 @@
     flex-wrap: nowrap;
 
     button {
-        padding: 30px 100px 30px 0;
+        padding: 30px 0 30px 0;
         cursor: pointer;
         border: none;
         width: 100%;
@@ -52,6 +61,7 @@
         background-color: #3b5998;
 
         @include tab {
+            padding: 30px 100px 30px 0;
             color: #d83f50;
             background-color: white;
         }
@@ -110,12 +120,8 @@
     display: flex;
     justify-content: center;
 
-    @include tab {
-        background-image: url('./../assets/images/pop-up.png');
-    }
-
     .inner-container {
-        margin-top: 480px;
+        margin-top: 455px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -139,7 +145,7 @@
             }
         }
 
-        input {
+        .email {
             max-width: 600px;
             width: 90%;
             border: none;
@@ -158,6 +164,49 @@
         .terms {
             font-size: 14px;
             margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 210px;
+            width: 100%;
+
+            input {
+                -webkit-appearance: none;
+                border: 1px solid black;
+                width: 23px !important;
+                height: 23px !important;
+                padding: 0 !important;
+                margin: 0 10px 0 0;
+                line-height: 23px;
+                background-color: white;
+                box-sizing: border-box;
+
+                &:checked {
+                border: none !important;
+                background: #0e4f9a;
+
+                    &:before {
+                        content: "✓";
+                        display: block;
+                        color: white;
+                        text-align: center;
+                        font-size: 20px !important;
+                    }
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
         .share-form {
             display: flex;
@@ -207,4 +256,17 @@
     top: 20px;
     right: 5px;
     z-index: 1;
+}
+
+.close-button {
+    right: unset !important;
+    width: 100%;
+    text-align: center;
+    top: 30px !important;
+    filter: invert(1);
+
+    svg {
+        height: unset !important;
+        width: 70px !important;
+    }
 }
