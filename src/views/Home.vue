@@ -26,15 +26,13 @@ export default {
     Footer,
   },
   mounted() {
-    console.log(this.$route);
   },
   metaInfo() {    
-      console.log('I just ran on',this.$route);
       return {
         title: this.$route.name,
         meta: [
           { property:"og:title", content: this.$route.name },
-          { property:"og:image", content: this.$route.image },
+          { property:"og:image", content: "../assets/images/memes/" + this.$route.image + ".png" },
           { property:"og:image:alt", content: this.$route.name },
           { property:"og:image:type", content:'image/jpg' },
           { property:"og:image:width", content: 260 },
