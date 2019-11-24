@@ -57,20 +57,21 @@ export default {
     ],
     methods: {
         show() {
+            this.$modal.image = this.$props.image;
             this.$modal.show('share-modal');
         },
 
         hide () {
             this.$modal.hide('share-modal');
         },
-        onError(error) {
+        onError(error,event) {
             if(error.includes('s already subscribed to list')) {
-                window.location.href = 'https://www.facebook.com/sharer/sharer.php?u=demothelonaginopodi.e-sepia.com/' + this.$props.image + '/&hashtag=%23thelonaginopodi';
+                window.location.href = 'https://www.facebook.com/sharer/sharer.php?u=demothelonaginopodi.e-sepia.com/' + this.$modal.image + '/&hashtag=%23thelonaginopodi';
             }else{
             }
         },
         onSuccess() {
-            window.location.href = 'https://www.facebook.com/sharer/sharer.php?u=demothelonaginopodi.e-sepia.com/' + this.$props.image + '/&hashtag=%23thelonaginopodi';
+            window.location.href = 'https://www.facebook.com/sharer/sharer.php?u=demothelonaginopodi.e-sepia.com/' + this.$modal.image + '/&hashtag=%23thelonaginopodi';
         },
     },
 }
