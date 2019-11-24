@@ -123,6 +123,13 @@ iframe {
     }
 }
 
+.logo-fixed {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+}
+
 h1 {
     font-size: 35px;
     font-weight: normal;
