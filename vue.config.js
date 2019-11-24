@@ -18,9 +18,8 @@ module.exports = {
 
             ],
             useRenderEvent: false,
-            headless: true,
+            headless: false,
             onlyProduction: true,
-            renderAfterElementExists: '[data-vue-meta]'
         }
     }
 }
