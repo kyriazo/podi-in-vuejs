@@ -1,7 +1,6 @@
 @import './mixins.scss';
-
 .banner-container {
-    width:100%;
+    width: 100%;
     height: auto;
     display: flex;
     position: relative;
@@ -11,19 +10,15 @@
     background-position-y: top;
     text-align: center;
     background-repeat: no-repeat;
-
     @include mob {
         // background-image: url('./../assets/images/front-banner-tab.png');
     }
-    
     @include desk {
         background-image: url('./../assets/images/front-banner.png');
     }
-
     @media (min-width: 1500px) {
-        height:auto;
+        height: auto;
     }
-
     @include huge {
         height: 1800px;
     }
@@ -37,7 +32,6 @@
     display: block;
     z-index: 1;
     color: white;
-
     @include mob {
         right: unset;
         left: 40px;
@@ -48,15 +42,12 @@
     max-width: 760px;
     color: white;
     margin-top: 500px;
-
     @include mob {
         margin-top: 470px;
     }
-
     @include tab {
         padding: 0;
     }
-
     @include desk {
         margin-top: 700px;
     }
@@ -71,24 +62,26 @@
     display: block;
     -webkit-animation: softBounce 0.8s infinite alternate ease-in-out;
     animation: softBounce 0.8s infinite alternate ease-in-out;
-
     @keyframes softBounce {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+        100% {
+            transform: translateY(0);
+        }
     }
-
     @include desk {
-        margin: 0 auto 80px;
+        margin: 10px auto 80px;
     }
-
 }
 
 .video-header {
     margin-bottom: 55px;
     font-size: 30px;
     padding: 0 10px;
-
     @include desk {
         padding: 0;
     }
@@ -101,21 +94,18 @@
 iframe {
     width: 100%;
     height: 200px;
-
     @media (min-width: 390px) {
         height: 300px;
     }
-
     @include mob {
         height: 440px;
     }
-
     @media (min-width: 1500px) {
         width: 1200px;
         height: 770px;
         position: absolute;
         bottom: 0;
-        transform:translateY(50%);
+        transform: translateY(50%);
         margin-left: auto;
         margin-right: auto;
         left: 0;
@@ -126,7 +116,6 @@ iframe {
 .logo {
     position: absolute;
     display: none;
-
     @include wide {
         display: block;
         bottom: 20px;
@@ -138,7 +127,6 @@ h1 {
     font-size: 35px;
     font-weight: normal;
     margin: 0 0 40px 0;
-
     @include mob {
         font-size: 45px;
     }
@@ -149,15 +137,12 @@ h1 {
     margin-bottom: 50px;
     line-height: 1.8;
     padding: 0 10px;
-
     @include mob {
         font-size: 18px;
     }
-
     @include desk {
         padding: 0;
     }
-
     span {
         font-weight: bold;
     }
@@ -176,12 +161,10 @@ h1 {
     cursor: pointer;
     text-decoration: none;
     display: block;
-
     @include mob {
         font-size: 20px;
         padding: 27px 60px;
     }
-
     span {
         font-weight: bold;
     }
