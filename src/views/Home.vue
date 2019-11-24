@@ -28,11 +28,17 @@ export default {
   mounted() {
   },
   metaInfo() {    
+      let image = '';
+      if (this.$route.path === '/') {
+        image = 'front-banner'
+      } else {
+        image = 'memes' + this.$route.path.substr(0,this.$route.path.length - 1);
+      }
       return {
         title: this.$route.name,
         meta: [
           { property:"og:title", content: this.$route.name },
-          { property:"og:image", content: require("../assets/images/memes" + this.$route.path.substr(0,this.$route.path.length - 1) + ".png") },
+          { property:"og:image", content: require("../assets/images/" + image + ".png") },
           { property:"og:image:alt", content: this.$route.name },
           { property:"og:image:type", content:'image/jpg' },
           { property:"og:image:width", content: 260 },
