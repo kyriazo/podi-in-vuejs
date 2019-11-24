@@ -8,7 +8,7 @@
             <a class='scroll-button' href='#video' v-smooth-scroll="{ duration: 1000, offset: -140}">ΞΕΚΙΝΑ ΤΩΡΑ ΤΟΝ ΑΓΩΝΑ!</a>
             <div class='video-header'>Μία ιστορία <span>άκρως αληθινή...</span></div>
             <iframe id='video' src="https://player.vimeo.com/video/374894109" width="1200" height="300" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-            <img class='logo' :class="{fixed: isFixed}" src='./../assets/images/ider_logo.png'>
+            <img class='logo' src='./../assets/images/ider_logo.png'>
         </div>
     </div>
 </template>
@@ -20,23 +20,23 @@ Vue.use(vueSmoothScroll)
 
 export default {
     name: 'Banner',
-    data: {
-        isFixed : false,
-    },
-    mounted() {
+//     data: {
+//         isFixed : false,
+//     },
+//     mounted() {
         
-        $(window).scroll(function (event) {
-        var scroll = $(window).scrollTop();
-        var element = $('.banner-container .logo').position().top;
-        if(scroll<element){
-            // $('banner-container .logo').removeClass('stuck');
-            this.isFixed = false;
-        }else if (scroll>element){
-            // $('banner-container .logo').addClass('stuck');
-            this.isFixed = true;
-        }
-});
-    }
+//         $(window).scroll(function (event) {
+//         var scroll = $(window).scrollTop();
+//         var element = $('.banner-container .logo').position().top;
+//         if(scroll<element){
+//             // $('banner-container .logo').removeClass('stuck');
+//             this.isFixed = false;
+//         }else if (scroll>element){
+//             // $('banner-container .logo').addClass('stuck');
+//             this.isFixed = true;
+//         }
+// });
+//     }
 }
 </script>
 
