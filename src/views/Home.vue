@@ -28,7 +28,7 @@ export default {
   mounted() {
     $(window).scroll(function() {
       let scrollTop = $(window).scrollTop();
-      let offset = 1714;
+      let offset = 830;
       let distance = (scrollTop - offset);
       if (distance <= 0) {
         $('.logo').removeClass('logo-fixed');
