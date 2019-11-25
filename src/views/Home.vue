@@ -26,6 +26,16 @@ export default {
     Footer,
   },
   mounted() {
+    $(window).scroll(function() {
+      let scrollTop = $(window).scrollTop();
+      let offset = $('.logo').offset().top;
+      let distance = (scrollTop - offset + 20);
+      if (distance < 0) {
+        $('.logo').removeClass('logo-fixed');
+      }else{
+        $('.logo').addClass('logo-fixed');
+      }
+    });
   },
   metaInfo() {    
       let image = '';
