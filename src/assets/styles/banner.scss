@@ -10,9 +10,6 @@
     background-position-y: top;
     text-align: center;
     background-repeat: no-repeat;
-    @include mob {
-        // background-image: url('./../assets/images/front-banner-tab.png');
-    }
     @include desk {
         background-image: url('./../assets/images/front-banner.png');
     }
@@ -39,7 +36,7 @@
 }
 
 .inner-container {
-    max-width: 760px;
+    max-width: 775px;
     color: white;
     margin-top: 500px;
     @include mob {
@@ -58,7 +55,7 @@
 }
 
 .hand {
-    margin: 40px auto 50px;
+    margin: 30px auto 30px;
     display: block;
     -webkit-animation: softBounce 0.8s infinite alternate ease-in-out;
     animation: softBounce 0.8s infinite alternate ease-in-out;
@@ -79,16 +76,18 @@
 }
 
 .video-header {
-    margin-bottom: 55px;
+    margin-bottom: 45px;
     font-size: 30px;
     padding: 0 10px;
+
     @include desk {
         padding: 0;
+        margin-bottom: 55px;
     }
-}
 
-.video-header span {
-    font-weight: bold;
+    span {
+        font-weight: bold;
+    }
 }
 
 iframe {
@@ -118,7 +117,7 @@ iframe {
     display: none;
     @include wide {
         display: block;
-        bottom: 20px;
+        top: 47.1%;
         right: 20px;
     }
 }
@@ -155,6 +154,10 @@ h1 {
     }
 }
 
+.video-link {
+    padding: 0 10px;
+}
+
 .scroll-button {
     background-color: #d3002b;
     border: none;
@@ -164,7 +167,7 @@ h1 {
     font-size: 14px;
     color: white;
     border-radius: 30px;
-    margin: 0 auto 115px;
+    margin: 0 auto 45px;
     cursor: pointer;
     text-decoration: none;
     display: block;
@@ -174,5 +177,9 @@ h1 {
     }
     span {
         font-weight: bold;
+    }
+
+    @include desk {
+        margin: 0 auto 115px;
     }
 }
