@@ -28,11 +28,11 @@ export default {
   mounted() {
     $(window).scroll(function() {
       let scrollTop = $(window).scrollTop();
-      let offset = $('.logo').offset().top;
-      let distance = (scrollTop - offset + 20);
-      if (distance < 0) {
+      let offset = 1714;
+      let distance = (scrollTop - offset);
+      if (distance <= 0) {
         $('.logo').removeClass('logo-fixed');
-      }else{
+      }else if (distance > 0) {
         $('.logo').addClass('logo-fixed');
       }
     });
