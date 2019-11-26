@@ -4,6 +4,10 @@ module.exports = {
             registry: undefined,
             renderRoutes: [
                 '/',
+                '/share',
+                '/privacy/',
+                '/cookies/',
+                '/terms/',
                 '/1/',
                 '/2/',
                 '/3/',
