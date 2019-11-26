@@ -2,6 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Share from '../views/Share.vue'
+import Privacy from '../views/Privacy.vue'
+import Terms from '../views/Terms.vue'
+import Cookies from '../views/Cookies.vue'
 
 Vue.use(VueRouter)
 
@@ -14,6 +17,21 @@ const routes = [{
         path: '/share',
         name: 'Share',
         component: Share
+    },
+    {
+        path: '/privacy',
+        name: 'Privacy',
+        component: Privacy
+    },
+    {
+        path: '/terms',
+        name: 'Terms',
+        component: Terms
+    },
+    {
+        path: '/cookies',
+        name: 'Cookies',
+        component: Cookies
     },
     {
         path: '/1',
