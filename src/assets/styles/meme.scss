@@ -20,7 +20,7 @@ body>.expandable-image.expanded {
     background: white;
     background: rgba(255, 255, 255, 0.95) !important;
     &>img {
-        max-width: 645px !important;
+        max-width: 840px !important;
     }
 }
 
@@ -257,6 +257,6 @@ body>.expandable-image.expanded {
     filter: invert(1);
     svg {
         height: unset !important;
-        width: 70px !important;
+        width: 50px !important;
     }
 }
