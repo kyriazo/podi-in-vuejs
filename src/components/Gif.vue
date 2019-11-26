@@ -1,7 +1,10 @@
 <template>
     <div class='gif-container'>
         <div class='inner-container'>
-            <img class='gif' src='./../assets/images/gif.png'>
+            <video class='gif' autoplay loop muted playsinline>
+                <source src="../assets/videos/IderHand.webm" type="video/webm">
+                <source src="../assets/videos/IderHand.mp4" type="video/mp4">
+            </video>
             <div class='gif-text'>
                 <h2>Ο αγώνας τώρα δικαιώνεται!</h2>
                 <span>Διάλεξε το σύνθημα που σε εκφράζει και μοιράσου το με τους φίλους σου.</span>
