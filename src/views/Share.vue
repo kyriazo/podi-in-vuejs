@@ -16,7 +16,7 @@
                             <template v-slot="{ subscribe, setEmail, error, success, loading }">
                             <form class='share-form' @submit.prevent="subscribe">
                                 <input class='email' type="email" required placeholder='EMAIL' @input="setEmail($event.target.value)" />
-                                <label class='terms' for='terms'><input id='terms' type="checkbox" required name="terms">Αποδέχομαι τους <a href="/terms">όρους</a></label>
+                                <label class='terms' for='terms'><input id='terms' type="checkbox" required name="terms">Αποδέχομαι τους <a href="/terms" target='newtab'>όρους</a></label>
                                 <button class="share-button" type="submit">ΕΙΣΑΙ ΕΤΟΙΜΟΣ ΝΑ ΚΑΝΕΙΣ SHARE</button>
                             </form>
                             </template>
@@ -35,16 +35,17 @@ export default {
         MailchimpSubscribe
     },
     mounted() {
-        console.log(this.$route.params.image)
     },
     methods: {
         onError(error,event) {
             if(error.includes('s already subscribed to list')) {
+                gtag('event', 'button', {'event_category': 'onclick','event_label': 'CompletedShare'});
                 window.location.href = 'https://www.facebook.com/sharer/sharer.php?u=thelonaginopodi.gr/' + this.$route.params.image + '/&hashtag=%23thelonaginopodi';
             }else{
             }
         },
         onSuccess() {
+            gtag('event', 'button', {'event_category': 'onclick','event_label': 'CompletedShare'});
             window.location.href = 'https://www.facebook.com/sharer/sharer.php?u=thelonaginopodi.gr/' + this.$route.params.image + '/&hashtag=%23thelonaginopodi';
         },
     }
