@@ -36,6 +36,8 @@ export default {
         $('.logo').addClass('logo-fixed');
       }
     });
+
+    $('.meme:nth-child(10)').css('font-family','OpenSans');
   },
   metaInfo() {    
       let image = '';
