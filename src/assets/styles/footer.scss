@@ -40,3 +40,92 @@
 .terms-link:hover {
     text-decoration: underline;
 }
+
+.Cookie {
+    background-color: #333333;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+// .Cookie--base .Cookie__button {
+//     background-color: #d40a26;
+
+//     &:hover {
+//         background-color: #b4061e;
+//     }
+// }
+
+// .More__button {
+//     text-decoration: none;
+//     color: white;
+//     display: flex;
+//     align-self: center;
+
+//     &:hover {
+//         text-decoration: underline;
+//     }
+// }
+
+.cookie-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+
+    @include tab {
+        flex-direction: row;
+    }
+
+    .link {
+        text-decoration: none;
+        color: white;
+        margin-bottom: 15px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        @include tab {
+            margin-right: 20px;
+            margin-bottom: 0;
+        }
+    }
+
+    .text {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+
+        @include tab {
+            margin: 0;
+        }
+        
+    }
+    
+    .links {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        @include tab {
+            flex-direction: row;    
+        }
+
+    }
+
+    .accept {
+        border: none;
+        background-color: #d40a26;
+        padding: 10px 40px;
+        font-size: 15px;
+        color: white;
+        cursor: pointer;
+        border-radius: 25px;
+
+        &:hover {
+            background-color: #b4061e;
+        }
+    }
+}
