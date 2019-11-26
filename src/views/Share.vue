@@ -40,12 +40,12 @@ export default {
     methods: {
         onError(error,event) {
             if(error.includes('s already subscribed to list')) {
-                window.location.href = 'https://www.facebook.com/sharer/sharer.php?u=demothelonaginopodi.e-sepia.com/' + this.$route.params.image + '/&hashtag=%23thelonaginopodi';
+                window.location.href = 'https://www.facebook.com/sharer/sharer.php?u=thelonaginopodi.gr/' + this.$route.params.image + '/&hashtag=%23thelonaginopodi';
             }else{
             }
         },
         onSuccess() {
-            window.location.href = 'https://www.facebook.com/sharer/sharer.php?u=demothelonaginopodi.e-sepia.com/' + this.$route.params.image + '/&hashtag=%23thelonaginopodi';
+            window.location.href = 'https://www.facebook.com/sharer/sharer.php?u=thelonaginopodi.gr/' + this.$route.params.image + '/&hashtag=%23thelonaginopodi';
         },
     }
 }
