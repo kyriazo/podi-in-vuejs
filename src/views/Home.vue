@@ -28,7 +28,7 @@ export default {
   mounted() {
     $(window).scroll(function() {
       let scrollTop = $(window).scrollTop();
-      let offset = 830;
+      let offset = 825;
       let distance = (scrollTop - offset);
       if (distance <= 0) {
         $('.logo').removeClass('logo-fixed');
@@ -48,7 +48,7 @@ export default {
         title: this.$route.name,
         meta: [
           { property:"og:title", content: this.$route.name },
-          { property:"og:image", content: require("../assets/images/" + image + ".png") },
+          { property:"og:image", content: require("../assets/images/" + image + ".jpg") },
           { property:"og:image:alt", content: this.$route.name },
           { property:"og:image:type", content:'image/jpg' },
           { property:"og:image:width", content: 260 },
