@@ -30,12 +30,20 @@ export default {
       let scrollTop = $(window).scrollTop();
       let offset = 825;
       let distance = (scrollTop - offset);
-      if (distance <= 0) {
+      let width = $(window).width();
+      if (distance <= 0 && width > 1200) {
         $('.logo').removeClass('logo-fixed');
-      }else if (distance > 0) {
+      }else if (distance > 0 && width > 1200) {
         $('.logo').addClass('logo-fixed');
       }
     });
+
+    $(window).resize(function() {
+      let width = $(window).width();
+      if(width <= 1200) {
+        $('.logo').removeClass('logo-fixed');
+      }
+    })
 
     $('.meme:nth-child(10)').css('font-family','OpenSans');
   },
