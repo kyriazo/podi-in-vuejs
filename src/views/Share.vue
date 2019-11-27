@@ -42,6 +42,7 @@ export default {
                 gtag('event', 'button', {'event_category': 'onclick','event_label': 'CompletedShare'});
                 window.location.href = 'https://www.facebook.com/sharer/sharer.php?u=thelonaginopodi.gr/' + this.$route.params.image + '/&hashtag=%23thelonaginopodi';
             }else{
+                console.log(error)
             }
         },
         onSuccess() {
