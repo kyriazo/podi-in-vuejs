@@ -50,7 +50,7 @@ export default {
   metaInfo() {    
       let image = '';
       if (this.$route.path === '/') {
-        image = 'front-banner'
+        image = 'oghomepage'
       } else {
         image = 'memes' + this.$route.path.substr(0,this.$route.path.length - 1);
       }
