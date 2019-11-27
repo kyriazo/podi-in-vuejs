@@ -39,6 +39,15 @@ export default {
     methods: {
         onError(error,event) {
             if(error.includes('s already subscribed to list')) {
+                //Injects tracking script
+                let id = Math.floor(Math.random() * 1000000) + 1;
+                var script = document.createElement('script');
+                script.src = "https://fv-pm.s3.amazonaws.com/pmtrackas.min.js";
+                script.onload = function () {
+                    FVPMSas.init(['IderThelonaginopodi', 'thankyou', '350', id])
+                };
+                document.getElementsByTagName('body')[0].appendChild(script);
+
                 gtag('event', 'button', {'event_category': 'onclick','event_label': 'CompletedShare'});
                 window.location.href = 'https://www.facebook.com/sharer/sharer.php?u=thelonaginopodi.gr/' + this.$route.params.image + '/&hashtag=%23thelonaginopodi';
             }else{
