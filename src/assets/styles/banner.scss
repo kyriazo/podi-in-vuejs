@@ -24,13 +24,13 @@
 .banner-hashtag {
     position: absolute;
     top: 30px;
-    left: 0;
-    right: 0;
+    left: 10px;
     display: block;
     z-index: 1;
     color: white;
+    font-size: 14px;
     @include mob {
-        right: unset;
+        font-size: 16px;
         left: 40px;
     }
 }
@@ -114,8 +114,10 @@ iframe {
 
 .logo {
     position: absolute;
-    display: none;
+    right: 20px;
+    top: 20px;
     @include wide {
+        position: absolute;
         display: block;
         top: 845px;
         right: 20px;
