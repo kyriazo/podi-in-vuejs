@@ -11,7 +11,6 @@
         <Meme title='Λευτεριά στα πόδια μας ΤΩΡΑ!' image='9'></Meme>
         <Meme title='liberté – fraternité - LEGalité!' image='10'></Meme>
         <Meme title='Αλληλεγγύη στα κάτω άκρα!' image='11'></Meme>
-        <div class='logo-bottom'><span>Powered by:</span><img class='logo'  src='./../assets/images/ider_logo.png'></div>
     </div>
 </template>
 
