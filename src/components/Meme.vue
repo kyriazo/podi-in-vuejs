@@ -4,7 +4,7 @@
             <expandable-image :src="require('../assets/images/memes/' + image + '.jpg')" v-bind:close-on-background-click='true' ></expandable-image>
         </div>
         <div class='meme-title'>{{title}}</div>
-        <div class='share'><span class='share-icon'></span><router-link class='router-link' @click="tagClick" :to= "{ name: 'Share', params: { image: this.image }}" >SHARE NOW!</router-link></div>
+        <div class='share' @click="tagClick"><span class='share-icon'></span><router-link class='router-link' :to= "{ name: 'Share', params: { image: this.image }}" >SHARE NOW!</router-link></div>
     </div>
 </template>
 
