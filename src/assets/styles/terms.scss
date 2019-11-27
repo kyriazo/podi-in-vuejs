@@ -16,3 +16,13 @@
     width: 100%;
     font-weight: bold;
 }
+
+.options {
+    padding: 30px;
+    background-color: lightgrey;
+    margin-top: 30px;
+
+    input {
+        cursor: pointer;
+    }
+}
