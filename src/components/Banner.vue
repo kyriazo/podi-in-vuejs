@@ -8,7 +8,7 @@
             <div class='video-link'><a class='scroll-button' href='#video' v-smooth-scroll="{ duration: 1000, offset: -140}">ΞΕΚΙΝΑ ΤΩΡΑ ΤΟΝ ΑΓΩΝΑ!</a></div>
             <div class='video-header'>Μία ιστορία <span>άκρως αληθινή...</span></div>
             <iframe id='video' src="https://player.vimeo.com/video/375607781" width="1200" height="300" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-            <img class='logo' src='./../assets/images/ider_logo.png'>
+            <a href="https://www.ider-eshop.gr/"><img class='logo' src='./../assets/images/ider_logo.png'/></a>
         </div>
     </div>
 </template>
