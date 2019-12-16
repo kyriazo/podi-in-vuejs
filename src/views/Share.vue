@@ -21,7 +21,7 @@
                             </form>
                             </template>
                         </mailchimp-subscribe>
-                        <a href="/" class='back'> στη λίστα</a>
+                        <a href="/" class='back'><Πίσω στη λίστα</a>
                 </div>
             </div>
 </template>
