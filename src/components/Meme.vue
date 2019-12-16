@@ -4,7 +4,7 @@
             <expandable-image :src="require('../assets/images/memes/' + image + '.jpg')" v-bind:close-on-background-click='true' ></expandable-image>
         </div>
         <div class='meme-title'>{{title}}</div>
-        <div class='share' @click="tagClick"><span class='share-icon'></span><a class="router-link" :href="'https://www.facebook.com/sharer/sharer.php?u=thelonaginopodi.gr/' + image + '/&hashtag=%23'+ hashtag">SHARE NOW!</a></div>
+        <div class='share' @click="tagClick"><span class='share-icon'></span><a class="router-link" :href="'https://www.facebook.com/sharer/sharer.php?u=thelonaginopodi.gr/' + image + '/&hashtag=%23thelonaginopodi'">SHARE NOW!</a></div>
     </div>
 </template>
 
